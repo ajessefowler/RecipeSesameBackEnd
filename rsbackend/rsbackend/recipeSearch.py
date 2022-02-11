@@ -4,10 +4,13 @@ from django.http import JsonResponse
 es = Elasticsearch("http://localhost:9200")
 
 # Parameter 'words' should be single string of keywords separated by single spaces
+def get_recipe(recipe):
+    return recipe['_source']
+
 def search(words):
     es.indices.refresh(index="recs")
 
-    return es.search(index="recs", body={ #perform sample search
+    results = es.search(index="recs", body={ #perform sample search
         "query": {
             "multi_match": {
                 "query": words,
@@ -16,3 +19,6 @@ def search(words):
                 }
             }
         })['hits']['hits']
+
+    return map(get_recipe, results) # Return only relevant recipe data
+        
