@@ -1,6 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User;
 
+class Message(models.Model):
+    content = models.CharField(blank=False, null=False)
+
+    def __str__(self):
+        return self.content
+
 class Ingredient(models.Model):
     name = models.CharField(blank=False, null=False)
 
