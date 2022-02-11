@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .rsbackend.views import MessageView
+from .rsbackend.views import MessageView, RandomView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('message/', MessageView.as_view())
+    path('message/', MessageView.as_view()),
+    path('random/', RandomView.as_view())
 ]

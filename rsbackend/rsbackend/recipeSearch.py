@@ -1,3 +1,5 @@
+import string
+import random
 from datetime import datetime
 from elasticsearch import Elasticsearch
 from django.http import JsonResponse
@@ -21,4 +23,24 @@ def search(words):
         })['hits']['hits']
 
     return map(get_recipe_data, results) # Return only relevant recipe data
+
+def random_recipes(amount):
+    es.indices.refresh(index="recs")
+
+    results = es.search(index="recs", body={
+        "size": amount,
+        "query": {
+            "function_score": {
+                "functions": [
+                    {
+                    "random_score": {
+                        "seed": ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(25))
+                    }
+                    }
+                ]
+            }
+        }
+    })['hits']['hits']
+
+    return map(get_recipe_data, results)
         
