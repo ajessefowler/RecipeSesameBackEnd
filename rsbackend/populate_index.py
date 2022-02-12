@@ -1,5 +1,6 @@
 from datetime import datetime
 import enum
+import json
 from elasticsearch import Elasticsearch
 es = Elasticsearch("http://localhost:9200")
 
@@ -296,11 +297,332 @@ recipes =  [
     ],
     "title": "Smoky-Spicy Bass",
     "picture_link": "Vw7ZGo.0jIFoEXqFJmU81LIyizTUcG2"
+  },
+  {
+    "instructions": "Watch how to make this recipe.\nSprinkle the steak with salt and pepper. Set aside.\nIn a large Dutch oven (preferably enameled cast iron) over medium-high heat, render the bacon until just starting to crisp, 6 to 7 minutes, stirring as needed. Remove 1 tablespoon of the bacon fat and set aside. Add the onions and jalapenos and cook until the onions are translucent, about 5 minutes more. Add in the garlic cook 1 to 2 minutes. Remove all from the pot to a small bowl. Set aside.\nWipe down the inside of the pot, add the reserved 1 tablespoon bacon fat and, when starting to smoke, add in 1/3 to 1/2 of the steak and cook, stirring as needed until just starting to brown, about 8 minutes. Remove to the vegetable bowl, repeat with the remaining steak.\nOnce the steak is cooked, deglaze with 1 tablespoon apple cider vinegar. Then return all the vegetables and cooked steak back to the pot and add in the beans, including the liquid in the can. Add the molasses, brown sugar, soy and ketchup, and stir to combine. Bring to a simmer over low heat, cover and cook for 2 hours, stirring every 20 to 30 minutes to assure that the bottom doesn't stick.\nAdd in more apple cider vinegar, a few tablespoons at a time to personal taste, and serve with crusty bread.",
+    "ingredients": [
+      "2 pounds skirt steak, cut into 1/2-inch dice",
+      "Kosher salt and fresh cracked black pepper",
+      "4 to 6 slices thick-cut applewood smoked bacon, 1/4-inch diced (about 1 cup)",
+      "1 1/2 cups 1/4-inch diced red onion",
+      "1/2 cup seeded and finely diced jalapenos (2 medium)",
+      "3 tablespoons minced garlic",
+      "1 teaspoon kosher salt",
+      "2 teaspoons fresh cracked black pepper",
+      "Apple cider vinegar, best quality",
+      "1 (15-ounce) can cannellini beans, with liquid",
+      "1 (15-ounce) can lima beans, with liquid",
+      "1 (15-ounce) can kidney beans, with liquid",
+      "1/3 cup molasses",
+      "2 tablespoons dark brown sugar",
+      "3 tablespoons soy sauce",
+      "1/3 cup ketchup",
+      "Crusty bread, for serving"
+    ],
+    "title": "Infineon Raceway Baked Beans",
+    "picture_link": "Ja5uaD8Q7m7vvtWwk2.48dr1eCre/qi"
+  },
+  {
+    "instructions": "Watch how to make this recipe.\nPreheat the oven to 350 degrees F.\nBrown the ground chuck in a large skillet. Drain the fat, and then add the tomato sauce, 1/2 teaspoon salt and plenty of freshly ground black pepper. Stir, and then simmer while you prepare the other ingredients.\nCook the egg noodles until al dente. Drain and set aside.\nIn a medium bowl, combine the sour cream and cottage cheese. Add plenty of freshly ground black pepper and a pinch of red pepper flakes. Add to the noodles and stir. Add the green onions and stir.\nTo assemble, add half of the noodles to a baking dish. Top with half the meat mixture, and then sprinkle on half the grated Cheddar. Repeat with noodles, meat and then a final layer of cheese. Bake until all the cheese is melted, about 20 minutes.\nServe with crusty French bread.\nTo freeze: Assemble the Sour Cream Noodle Bake in a disposable aluminum oven-proof pan and seal the top of the container with the lid or heavy foil. Seal the edges to prevent freezer burn and place in the freezer.\nTo cook from frozen: Place directly in a 375-degree F oven and bake, covered, for 45 minutes. Remove the lid and bake until lightly brown and bubbly, about 20 minutes more.",
+    "ingredients": [
+      "1 1/4 pounds ground chuck",
+      "One 15-ounce can tomato sauce",
+      "1/2 teaspoon salt",
+      "Freshly ground black pepper",
+      "8 ounces egg noodles",
+      "1/2 cup sour cream",
+      "1 1/4 cups small curd cottage cheese",
+      "Pinch red pepper flakes",
+      "1/2 cup sliced green onions (less to taste)",
+      "1 cup grated sharp Cheddar",
+      "Crusty French bread, for serving"
+    ],
+    "title": "Sour Cream Noodle Bake",
+    "picture_link": "nm/WxalB.VjEZSa0iX9RuZ8xI51Y7bS"
+  },
+  {
+    "instructions": "Heat a large nonstick skillet over medium-high heat and add the oil. Add the eggplant rounds and season with 1/4 teaspoon salt. Cover and cook until brown on the bottoms, about 4 minutes. Reduce the heat to medium-low and, working quickly, flip each eggplant round and top with a dollop of hummus and a cherry tomato quarter, rounded-side down. Cover and cook until heated through and the bottoms are golden brown, about 7 minutes.\nTransfer to a platter using a spatula. Sprinkle with the parsley and lemon zest and serve.",
+    "ingredients": [
+      "1 tablespoon extra-virgin olive oil",
+      "2 baby Italian eggplants (about 6 ounces each), unpeeled, cut into 8 rounds each",
+      "Kosher salt",
+      "1/2 cup roasted garlic hummus or other prepared hummus",
+      "4 cherry or grape tomatoes, quartered",
+      "2 tablespoons fresh flat-leaf parsley leaves",
+      "1 teaspoon finely grated lemon zest"
+    ],
+    "title": "Middle-Eastern Eggplant Rounds",
+    "picture_link": "ibuqgKBoAYj7a086h/tYaHYu2M4N3pS"
+  },
+  {
+    "instructions": "MIX ingredients in 2-qt. microwaveable bowl.\nMICROWAVE on HIGH 5 min. or until VELVEETA is completely melted, stirring after 3 min.\nSERVE with assorted cut-up fresh vegetables, WHEAT THINS Original Crackers or tortilla chips.\nRo*Tel is a product of ConAgra Foods, Inc.",
+    "ingredients": [
+      "1 lb. (16 oz.) VELVEETA Pasteurized Prepared Cheese Product, cut into 1/2-inch cubes",
+      "1 can (10 oz.) RO*TEL Diced Tomatoes & Green Chilies, undrained"
+    ],
+    "title": "VELVEETA Famous Queso Dip",
+    "picture_link": "lDoTUA1FP2BYbLy3s1h5s1OfAvA4LkG"
+  },
+  {
+    "instructions": "1. Pierce the meat all over with a fork and place in a large resealable plastic bag. Add 2 tablespoons of the olive oil, the Worcestershire, vinegar, garlic and whole rosemary. Seal the bag, pushing out all the air. Shake the bag a few times and refrigerate 8 hours or overnight.\n2. Preheat the broiler and line a rimmed baking sheet with aluminum foil. Remove the meat from the marinade and pat dry. Sprinkle both sides with 1 1/2 teaspoons salt and 1/2 teaspoon pepper. Broil, flipping once, until the internal temperature reaches 125 degrees F, about 13 minutes. Transfer to a cutting board, tent with foil and let rest at least 15 minutes.\n3. Meanwhile, heat the remaining 2 tablespoons oil in a large skillet over medium-high heat. Cook the bacon, stirring, until crispy, about 5 minutes. Add the mushrooms and cook until golden brown and tender, about 10 minutes. Add the breadcrumbs, butter, chopped rosemary and 1/4 teaspoon each salt and pepper. Cook, stirring, until the breadcrumbs are golden brown, another 3 minutes. Set aside.\n4. Stir together the sour cream and horseradish and season with salt and pepper. Slice the steak against the grain, top with the mushrooms and garnish with the chopped parsley. Serve with the horseradish sauce on the side.",
+    "ingredients": [
+      "One 2 to 2 1/2-pound 1 1/2-inch-thick London broil",
+      "1/4 cup olive oil",
+      "1/4 cup Worcestershire sauce",
+      "2 tablespoons balsamic vinegar",
+      "4 cloves garlic, smashed",
+      "2 whole sprigs rosemary plus 1 teaspoon chopped leaves",
+      "Kosher salt and freshly ground black pepper",
+      "1 strip bacon, chopped (about 1/2 ounce)",
+      "1 pound cremini mushrooms, halved",
+      "1/2 cup panko breadcrumbs",
+      "2 tablespoons unsalted butter",
+      "1/2 cup sour cream",
+      "2 tablespoons prepared drained horseradish",
+      "1 tablespoon chopped fresh parsley, for garnish"
+    ],
+    "title": "Balsamic-Marinated Steak and Unstuffed Mushrooms",
+    "picture_link": "z0MGPSRzy.OxWWAg3mIYxQiCkpOiO/u"
+  },
+  {
+    "instructions": "Preheat oven to 400degrees.\nDip chicken in egg, then bread crumbs, coating well. Arrange chicken in 13 x 9-inch baking dish.\nBake 20 minutes. Top chicken with prosciutto, then 1-1/2 cups pasta sauce. Top with mozzarella cheese. Bake an additional 10 minutes or until chicken is thoroughly cooked. Serve over hot spaghetti tossed with remaining heated sauce. Sprinkle, if desired, with parmesan cheese shavings.",
+    "ingredients": [
+      "4 boneless, skinless chicken breast halves (about 1-1/4 lbs.)",
+      "1 egg, slightly beaten",
+      "3/4 cup Italian seasoned dry bread crumbs",
+      "2 ounces thinly sliced prosciutto or deli boiled ham",
+      "1 jar Bertolli\u00ae Vineyard Premium Collections Marinara with Burgundy Wine Sauce",
+      "4 ounces fresh mozzarella cheese, thinly sliced",
+      "8 ounces spaghetti, cooked and drained"
+    ],
+    "title": "Baked Chicken Saltimbocca",
+    "picture_link": "nCa4thC1KIKow2sngy24JjJkRrfMdSu"
+  },
+  {
+    "instructions": "For the dough, in a large bowl, combine the flour, granulated sugar, and salt. Sprinkle in the butter pieces and cut them into the flour with a pastry cutter (or 2 knives or your fingertips) until the mixture is crumbly and the pieces are the size of small peas. Mix in 5 tablespoons very cold water and toss with a fork until the dough just comes together.\nPlace the dough on the floured counter and knead a few times, just to make a ball. Don't overwork the dough or the crust will be tough! Lightly flour the counter. Flatten the dough into a disk and wrap in plastic. Let it rest in the refrigerator for at least 15 minutes. (If making more than 1 hour ahead, let it rest on the counter for 10 minutes before rolling out.)\nRoll the dough out on a floured surface into a 12-inch circle. Fit into a 9-inch pie plate and trim to a 1/2-inch overhang all around. Fold the overhanging dough under itself and crimp with a fork or your fingers. Chill the pie shell in the refrigerator for 30 minutes.\nPreheat the oven to 400 degrees F. Cover the shell with a piece of parchment paper and fill with dried beans or pie weights. Bake on the bottom rack until the crust is set but still blond in color, about 20 minutes. Remove the paper and beans or weights and bake until the crust is golden brown, 10 to 15 minutes more. Let cool completely on a rack.\nFor the custard, in a saucepan, combine the granulated sugar, flour, and salt. Add the milk gradually while stirring. Cook over medium heat, stirring constantly, until it begins to bubble. Cook, stirring, for 3 minutes, or until it forms firm peaks.\nStir a small amount of the hot milk mixture into the beaten egg yolks in a small bowl. This will temper the yolks so they don't turn into scrambled eggs. Stir the tempered yolks back into the rest of the custard. Cook for 2 more minutes, stirring constantly. Remove from the heat and stir in the butter and vanilla. Slice 2 bananas into the cooled pastry crust. Top with half of the custard and slice the remaining bananas on top. Top with the rest of the custard. Chill for at least 1 hour.\nFor the whipped cream, in a cold bowl with an electric mixer, beat the cream, confectioners' sugar, and vanilla until firm peaks form. Be careful not to overbeat or your cream will turn to butter. Watch as you beat and stop when it gets thick and stays on the beaters when you remove them from the bowl.\nTop the pie with the whipped cream and serve.",
+    "ingredients": [
+      "1 1/2 cups all-purpose flour (plus more for rolling the dough)",
+      "2 teaspoons granulated sugar",
+      "1/2 teaspoon kosher salt",
+      "6 tablespoons cold unsalted butter, cut into pieces",
+      "3/4 cup granulated sugar",
+      "1/3 cup all-purpose flour",
+      "1/4 teaspoon kosher salt",
+      "2 cups milk",
+      "3 large egg yolks, beaten",
+      "2 tablespoons unsalted butter",
+      "2 teaspoons vanilla extract",
+      "4 bananas, peeled",
+      "1 1/2 cups chilled heavy cream",
+      "3 tablespoons confectioners' sugar",
+      "1 teaspoon pure vanilla extract"
+    ],
+    "title": "Happy Holly's Banana Cream Pie",
+    "picture_link": "U/ynRck7Xd8CYkGmwRfE9DIo5p9B8Qi"
+  },
+  {
+    "instructions": "Using a mandolin or a very sharp knife, slice zucchini into very thin rounds. Overlap zucchini disks in 1 layer on a plate; season with salt and pepper. Drizzle over the olive oil and lemon juice and scatter with leeks. Using a mandoline or a vegetable peeler, shave very thin slices of Parmesan and place them over leeks. Garnish with mint leaves. Serve immediately.",
+    "ingredients": [
+      "2 medium zucchini",
+      "Kosher salt and freshly ground black pepper",
+      "1 tablespoon extra-virgin olive oil",
+      "1/2 lemon, juiced",
+      "1 leek, white part only, sliced thinly",
+      "1/4 pound piece Parmesan",
+      "Fresh mint leaves, for garnish"
+    ],
+    "title": "Zucchini Carpaccio",
+    "picture_link": "QhaGK7vDKztcrqepOOW.4C1r7zSTMu."
+  },
+  {
+    "instructions": "Place sliced beets in large bowl. In a small bowl, whisk together vinegar, mustard, and caraway seeds. Slowly add oil in a stream and continue whisking. Season with salt and pepper. Pour the dressing over the beets leaving 3 tablespoons of dressing in the small bowl. Add the radishes and scallions to the remaining dressing in the small bowl and toss to coat. Place the lettuce on a platter and top with beets. Sprinkle beets with radishes and scallions. Garnish with parsley.",
+    "ingredients": [
+      "1 1/2 pounds beets, boiled, peeled and thinly sliced",
+      "3 tablespoons red wine vinegar",
+      "1 teaspoon Dijon mustard",
+      "1 teaspoon caraway seeds",
+      "1/3 cup olive oil",
+      "Salt and pepper",
+      "6 radishes, trimmed and thinly sliced",
+      "3 scallions, thinly sliced",
+      "Green leaf lettuce",
+      "3 tablespoons finely chopped parsley"
+    ],
+    "title": "Beet Salad",
+    "picture_link": "t4OwsE.lMCuZahN7KGjHVUjAUXylM6K"
+  },
+  {
+    "instructions": "Watch how to make this recipe.\nPreheat the oven to 400 degrees F.\nIn a medium straight-sided saute pan, heat the olive oil over medium heat. Add the onion and cook until soft, about 5 minutes. Add the capers, oregano, garlic, chile and orange zest. Cook for 3 more minutes. Add the tomatoes and tomato puree. Bring to a slow simmer and cook until thickened, 10 to 15 minutes.\nSpoon the tomato mixture into the bottom of a small baking dish. Form 6 small wells to hold the eggs. Crack an egg into each well. Place the croutons around the eggs and finish with the Parmigiano-Reggiano. Bake until the yolks are still soft but the whites are cooked, 8 to 10 minutes.",
+    "ingredients": [
+      "5 tablespoons extra-virgin olive oil",
+      "1 cup small-diced onion (about 1 medium onion)",
+      "1/4 cup capers, drained and rinsed",
+      "2 tablespoons minced fresh oregano",
+      "1 tablespoon finely minced garlic",
+      "1 green serrano chile, finely sliced",
+      "Grated zest of 1 orange",
+      "One 28-ounce can whole San Marzano tomatoes, drained and roughly chopped",
+      "6 ounces San Marzano tomato puree",
+      "6 large eggs",
+      "1 cup 3/4-inch baked croutons",
+      "1/2 cup grated Parmigiano-Reggiano"
+    ],
+    "title": "Baked Eggs with Green Chiles and Capers",
+    "picture_link": "Ip8xOH7TRsTLsV975Xx3GD5PhlTW8ca"
+  },
+  {
+    "instructions": "Watch how to make this recipe.\nPreheat the oven to 375 degrees F. Butter a 9-inch round casserole dish.\nMelt 3 tablespoons butter in a skillet over medium heat. Add the minced garlic and cook for a couple of minutes. Crank up the heat a bit and throw in the spinach. Stir the spinach around and cook for a couple of minutes until it wilts; season with salt and pepper. Transfer the spinach to a mesh strainer set over a bowl to drain. Set aside.\nMelt 2 tablespoons butter in the same skillet, throw in the quartered artichokes and cook over medium-high heat until the artichokes start to get a little color, about 3 minutes. Transfer the artichokes to the strainer with the spinach.\nIn the same skillet or a different pot, melt the remaining 3 tablespoons butter and whisk in the flour until it makes a paste. Cook over medium-low heat for a minute or 2, then pour in the milk. Stir and cook until slightly thickened, about 3 minutes; splash in more milk if needed. Add the cream cheese, pepper Jack, feta, Parmesan and cayenne and stir until the cheeses are melted and the sauce is smooth. Chop the artichokes and spinach and add them to the sauce. Stir to combine.\nPour the mixture into the prepared casserole dish. Top with extra grated pepper Jack and bake until the cheese is melted and bubbly, about 15 minutes. Serve with the Salted Pita Wedges.\nPreheat the oven to 375 degrees F.\nCut the pita breads into 6 wedges each. Lay the wedges on a foil-lined baking sheet and brush both sides generously with the olive oil. Sprinkle both sides with salt, then bake until they're golden brown and crisp, 15 to 18 minutes.",
+    "ingredients": [
+      "8 tablespoons (1 stick) butter, plus more for buttering the casserole dish",
+      "1/4 cup minced garlic",
+      "One 10-ounce bag fresh baby spinach",
+      "Kosher salt and freshly ground black pepper",
+      "Two 14-ounce cans artichoke hearts, rinsed, drained and quartered",
+      "3 tablespoons all-purpose flour",
+      "1 1/2 cups whole milk, plus more if needed",
+      "One 8-ounce package cream cheese, softened",
+      "3/4 cup grated pepper Jack cheese, plus more for topping",
+      "1/2 cup crumbled feta",
+      "1/2 cup grated Parmesan",
+      "1/4 teaspoon cayenne",
+      "Salted Pita Wedges, recipe follows, for serving",
+      "6 pita breads",
+      "1/2 cup olive oil",
+      "1 tablespoon kosher salt"
+    ],
+    "title": "Spinach Artichoke Dip",
+    "picture_link": "DL8kbR9I0paCb2JTjqLnqnPNV0kTMi2"
+  },
+  {
+    "instructions": "Preheat the oven to 350 degrees. Pulse the wafers and pine nuts in a food processor until well ground up. Add the butter and blend until evenly mixed. Set aside 1/4 cup of crumbs. Press the remaining crumb mixture evenly into a 9-by-13 shallow baking pan; bake until golden brown, 15 to 18 minutes. Cool.\nIn a medium bowl, thoroughly whisk together the tequila, lime juice, egg yolks and condensed milk.\nIn another medium bowl, beat the egg whites and sugar with an electric mixer until they hold soft peaks. Gently fold the egg whites into the tequila mixture. Spread the filling evenly over the crust and bake for 25 minutes; cool. Sprinkle the reserved crumbs on top. Chill in the fridge for 2 hours or overnight before cutting into bars.",
+    "ingredients": [
+      "1 12-ounce box vanilla wafers",
+      "1/2 cup pine nuts",
+      "3/4 cup unsalted butter (1 1/2 sticks), melted",
+      "1/3 cup tequila",
+      "1/2 cup fresh lime juice",
+      "5 large egg yolks, plus 2 egg whites",
+      "1 14-ounce can sweetened condensed milk",
+      "1 tablespoon sugar"
+    ],
+    "title": "Tequila Bars",
+    "picture_link": "EzdYe5Whds4iscT4kAjyoVeR3dbF6dW"
+  },
+  {
+    "instructions": "Make the dough: Put 2 1/4 cups warm (100 degrees F) water in a large measuring cup; stir in the yeast to dissolve, then stir in the sugar and olive oil. Let stand until bubbly, 3 to 5 minutes. Combine 5 cups flour and 2 teaspoons salt in a stand mixer fitted with the paddle attachment. Add the yeast mixture and mix on medium-low speed, adding a little more flour or water, if needed, until a rough, sticky ball of dough forms, about 1 minute. Let rest 5 minutes, then mix on medium low until no longer sticky, about 1 more minute. Transfer the dough to an oiled surface and knead with oiled hands until smooth, about 10 times. Let rest 5 minutes, then knead briefly again and transfer to an oiled bowl. Cover with plastic wrap; refrigerate at least 8 hours or overnight. Divide the dough into 4 balls, dust with flour and cover loosely with plastic wrap. Let sit at room temperature 2 hours before making the pizzas.\nMake the sauce: Crush the tomatoes in a bowl using your hands. Stir in the olive oil, garlic, 1 1/2 teaspoons salt and the oregano. Cover and let stand 2 hours. Position a pizza stone or inverted baking sheet on the lowest oven rack; preheat to 500 degrees F for at least 30 minutes. Stretch each ball of dough into a 12-to-14-inch round on individual sheets of parchment paper. Let rest 15 minutes. Remove and discard the garlic from the sauce. Spread a thin layer of sauce on each pizza, leaving a border. Top with one-quarter each of the mozzarella, parmesan, cherry peppers, soppressata and radicchio; drizzle with olive oil. Slide 1 pizza (on the parchment) onto a pizza peel or another inverted baking sheet, then slide onto the hot stone in the oven. Bake until the crust browns, 12 to 15 minutes. Top with oregano. Repeat to make 3 more pizzas. Photograph by Con Poulos",
+    "ingredients": [
+      "1 1/2 teaspoons active dry yeast",
+      "1 tablespoon sugar",
+      "1 tablespoon extra-virgin olive oil, plus more for brushing",
+      "5 to 5 1/2 cups all-purpose flour, plus more for dusting",
+      "Kosher salt",
+      "1 28-ounce can whole peeled San Marzano tomatoes",
+      "2 tablespoons extra-virgin olive oil",
+      "5 cloves garlic, smashed",
+      "Kosher salt",
+      "1 teaspoon dried oregano",
+      "1 pound fresh mozzarella, sliced",
+      "1/2 cup grated parmesan cheese",
+      "1/2 cup pickled sweet cherry peppers, seeded and sliced",
+      "4 ounces sliced hot soppressata, cut into strips",
+      "1 small head radicchio, sliced",
+      "Extra-virgin olive oil, for drizzling",
+      "Dried oregano, for sprinkling"
+    ],
+    "title": "Soppressata Pizzas",
+    "picture_link": "jbh6On9Vu7pUPNaYgvVA1RLfwBQFvHW"
+  },
+  {
+    "instructions": "For the cupcakes: Preheat the convection oven to 325 degrees F or a standard oven to 350 degrees F.\nIn large mixer bowl, cream together the granulated sugar and butter until light and fluffy with a heavy duty mixer. Add the eggs, one at a time, and mix thoroughly after each addition. Add the coconut extract and mix well. Combine the flour, baking soda and salt. Add half of the flour to the mixer bowl along with 1/2 cup of the half-and-half. Mix until the flour is mixed in, scraping the sides of the bowl with a rubber spatula. Add the rest of flour mixture and the other 1/2 cup half-and-half. Mix until the batter is smooth and all of the flour lumps are gone. Fold in the coconut flakes.\nFill 24 cupcake liners half full and bake for 20 minutes in the convection oven or 28 minutes in the standard oven. The tops of the cupcakes should be lightly browned. Check the cupcakes to make sure no batter sticks to a wooden toothpick when inserted into the cupcake. Cool the cupcakes completely.\nFor the mousse filling: In large mixer bowl, beat the heavy cream, half-and-half, coconut extract and pudding mix until light and fluffy using a heavy duty mixer. It should have the consistency of whipped cream. Gently fold in the coconut using a plastic spatula. Put the filling in a pastry bag or zipper bag with a corner cut off.\nFor the coconut buttercream: In large mixer bowl, beat together the butter and half of the powdered sugar using heavy duty mixer. Add the half-and-half and the rest of the powdered sugar, along with the coconut extract, and mix well. If the frosting is thicker than you would like, add 1 teaspoon of additional half-and-half at a time, mixing well after each addition, until the frosting reaches the correct consistency. The thickness may depend on the humidity levels in your region. Put into a pastry bag.\nTo assemble: Make a hole in the middle of each cupcake using a sharp knife. Be sure and leave a small amount of cake in the bottom of the hole. Fill the cupcakes with the mousse filling. Frost with coconut buttercream. You may top the cupcakes with more flake coconut or toasted coconut as desired.\nServe immediately or chill until ready to serve.",
+    "ingredients": [
+      "2 cups granulated sugar",
+      "2 sticks unsalted butter, at room temperature",
+      "4 large whole eggs",
+      "2 teaspoons coconut extract",
+      "2 1/2 cups all-purpose flour",
+      "4 teaspoons baking powder",
+      "1 teaspoon salt",
+      "1 cup half-and-half",
+      "1 cup flake coconut",
+      "1 cup heavy cream",
+      "1 cup half-and-half",
+      "2 teaspoons coconut extract",
+      "1 package (4 serving size) instant vanilla pudding mix",
+      "1 cup flake coconut",
+      "2 sticks unsalted butter, at room temperature",
+      "2 pounds powdered sugar",
+      "1 teaspoon coconut extract",
+      "1/4 cup half-and-half, plus more for thinning frosting if needed",
+      "Flake or toasted coconut, for garnish"
+    ],
+    "title": "Coconut Cupcakes with Whipped Coconut Mousse Filling and Coconut Buttercream",
+    "picture_link": "pkNtENpEwnlk2lZFDRe9u6zusdWBuYm"
+  },
+  {
+    "instructions": "Brush shrimp with 2 to 3 tablespoons Ginger Sesame Vinaigrette. Grill over medium-high heat 3 to 4 minutes or until pink, turning once.\nDivide salad on 2 large plates. Arrange shrimp, tomatoes, mushrooms and green onions on each. Drizzle with Ginger Sesame Vinaigrette, to taste. Refrigerated leftovers.\nCombine 1/3 cup rice vinegar, 1/4 cup toasted sesame seed, 1 tablespoon soy sauce, 2 teaspoons finely chopped ginger, and 2 teaspoons minced garlic in blender container. Cover; blend until smooth. Slowly add 2/3 cup canola oil and 1/3 cup sesame oil in thin stream, until blended. Makes about 1-1/2 cups.",
+    "ingredients": [
+      "8 medium-large raw shrimp, peeled and deveined",
+      "Ginger Sesame Vinaigrette (recipe below)",
+      "1 pkg. (12 oz.) DOLE\u00ae Very Veggie\u00ae",
+      "10 cherry tomatoes, cut in half",
+      "2 medium mushrooms, thinly sliced",
+      "2 green onions, diagonally sliced"
+    ],
+    "title": "Grilled Shrimp Salad with Sesame Ginger Vinaigrette",
+    "picture_link": "TemKwhNF4FXkXZjR1So3G.a7aaJL/qq"
+  },
+  {
+    "instructions": "Whisk the garlic, ginger, sesame oil, vinegar, soy sauce and sugar in a large bowl. Transfer 2 tablespoons of the dressing to a medium bowl, add the shrimp and toss. Add the carrot, celery and snow peas to the remaining dressing and toss.\nHeat a large skillet over high heat and add 2 teaspoons vegetable oil. Add the shrimp and stir-fry until they turn pink, 3 to 4 minutes, then transfer to the bowl with the vegetables. Add 3 to 4 tablespoons water to the skillet and scrape up the browned bits with a wooden spoon, then add the liquid to the bowl with the shrimp. Let the skillet reheat, then add the remaining 1 teaspoon vegetable oil and stir-fry the rice until toasted, about 2 minutes. Remove from the heat and let cool.\nAdd the rice and scallions to the shrimp-vegetable mixture and toss. Divide among bowls and top with the lettuce, sprouts, chow mein noodles and/or peanuts.\nPhotograph by Kate Sears",
+    "ingredients": [
+      "2 cloves garlic, minced",
+      "1 2-inch piece ginger, peeled and grated",
+      "3 tablespoons toasted sesame oil",
+      "1/4 cup rice vinegar",
+      "2 tablespoons soy sauce",
+      "Pinch of sugar",
+      "3/4 pound large shrimp, peeled, deveined and halved lengthwise",
+      "1 large carrot, shredded",
+      "2 stalks celery, thinly sliced",
+      "2 cups snow peas, thinly sliced",
+      "1 tablespoon vegetable oil",
+      "2 cups cooked white or brown rice",
+      "1 bunch scallions, thinly sliced",
+      "1/4 head iceberg lettuce, shredded",
+      "1 cup mung bean sprouts",
+      "1/2 cup chow mein noodles and/or chopped peanuts"
+    ],
+    "title": "Asian Rice Salad With Shrimp",
+    "picture_link": "qYyUp4ObVQXbK8NIoLx70FIiRUJdR16"
+  },
+  {
+    "instructions": "Watch how to make this recipe.\nPut an oven rack in the middle of the oven and preheat to 350 degrees F. Grease a Bundt pan with butter.\nFirst prepare the cake batter. Add the butter and sugar to a bowl and, using an electric hand mixer or a stand mixer, beat until light and fluffy. Then beat in 1 egg.\nSift together the flour, baking soda, baking powder and salt in a medium bowl. Mix the buttermilk, cocoa powder, tequila, triple sec and vanilla extract in a medium bowl. Beat half of the flour mixture half of the buttermilk into the egg mixture. Repeat, ending with the flour mixture. Blend until well incorporated.\nNow prepare the flan mixture. In a blender, combine the condensed milk, evaporated milk, cream cheese, the remaining 3 eggs and vanilla extract. Blend on high for 30 seconds.\nScoop the cake batter into the prepared Bundt pan. Then slowly pour the flan mixture over the cake batter. Add about 1-inch of hot water to the roasting pan.\nCarefully slide the pan into the oven and bake until the surface of the cake is firm to the touch, or an inserted toothpick comes out clean, about 1 hour. When the cake is done, remove from the water bath and cool completely to room temperature, about 1 hour.\nRun the tip of a sharp paring knife along the edge of the Bundt pan to loosen. Invert a large, rimmed serving platter over the Bundt pan, grasp tightly together, jiggle it a little and flip over to release the chocoflan from the pan. Garnish the cake with some chopped pecans. Place some mixed berries in the center of the chocoflan then sprinkle the entire thing with powdered sugar and serve.",
+    "ingredients": [
+      "12 tablespoons (1 1/2 sticks) butter, plus more for greasing, at room temperature",
+      "1 cup sugar",
+      "4 eggs, at room temperature",
+      "1 2/3 cups all-purpose flour",
+      "1 teaspoon baking soda",
+      "3/4 teaspoon baking powder",
+      "1/2 teaspoon salt",
+      "1 1/3 cup buttermilk",
+      "1/2 cup cocoa powder",
+      "2 teaspoons tequila",
+      "2 teaspoons triple sec",
+      "1 teaspoon vanilla extract",
+      "One 14-ounce can sweetened condensed milk",
+      "One 12-ounce can evaporated milk",
+      "4 ounces cream cheese, at room temperature",
+      "1 tablespoon vanilla extract",
+      "1/4 cup chopped pecans or walnuts",
+      "Mixed berries, such as raspberries, blackberries, blueberries and strawberries",
+      "Powdered sugar, for dusting"
+    ],
+    "title": "Chocoflan",
+    "picture_link": "miKSixbfESXwa3z58BvWr30d8cjxo1O"
   }
 ]
 
 for ind, rep in enumerate(recipes):
     es.index(index="recs", id=ind + 1, document=rep) #create index and add document.
-
 
 es.indices.refresh(index="recs")

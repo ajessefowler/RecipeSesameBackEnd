@@ -14,9 +14,10 @@ class Ingredient(models.Model):
         return self.name
 
 class Recipe(models.Model):
-    name = models.CharField(blank=False, null=False)
-    imageUrl = models.URLField(blank=True, null=True)
+    title = models.CharField(blank=False, null=False)
+    picture_link = models.URLField(blank=True, null=True)
     instructions = models.CharField(blank=False, null=False)
+    ingredients = models.ManyToManyField(Ingredient)
 
     def __str__(self):
         return self.name
