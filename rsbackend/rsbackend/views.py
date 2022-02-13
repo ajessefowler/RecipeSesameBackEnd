@@ -15,6 +15,6 @@ class MessageView(APIView):
 
 class RandomView(APIView):
     def get(self, request):
-        number_of_recipes = 3
+        number_of_recipes = 6
         return Response(random_recipes(number_of_recipes))
         
