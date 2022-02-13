@@ -5,9 +5,9 @@ es = Elasticsearch("http://localhost:9200")
 print("Enter your recipe search: ")
 input = input()
 
-es.indices.refresh(index="recs")
+es.indices.refresh(index="test")
 
-res = es.search(index="recs", query={ #perform sample search
+res = es.search(index="test", query={ #perform sample search
     "multi_match": {
             "query": input,
             "fields": ["title", "instructions", "ingredients"],

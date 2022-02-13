@@ -10,13 +10,13 @@ def get_recipe_data(recipe):
 
 # Parameter 'words' should be single string of keywords separated by single spaces
 def search(words):
-    es.indices.refresh(index="recs")
+    es.indices.refresh(index="test")
 
-    results = es.search(index="recs", body={ #perform sample search
+    results = es.search(index="test", body={ #perform sample search
         "query": {
             "multi_match": {
                 "query": words,
-                "fields": ["title", "instructions", "ingredients"],
+                "fields": ["Title", "Instructions", "Ingredients"],
                 "operator": "or"
                 }
             }
@@ -25,9 +25,9 @@ def search(words):
     return map(get_recipe_data, results) # Return only relevant recipe data
 
 def random_recipes(amount):
-    es.indices.refresh(index="recs")
+    es.indices.refresh(index="test")
 
-    results = es.search(index="recs", body={
+    results = es.search(index="test", body={
         "size": amount,
         "query": {
             "function_score": {
